@@ -18,6 +18,11 @@ header {
 }
 a{
   text-decoration: none;
+  color: #333;
+  transition: color 0.3s; 
+}
+a:hover {
+  color: #ff0000; 
 }
 header nav ul {
   list-style-type: none;
@@ -68,46 +73,84 @@ header nav ul li {
 }
 
 
-
 input {
   border-radius: 20px;
   font-size: 30px;
   color: #444; 
 }
 
-#servicos {
-  height: 500px;
-}
-
-.recepcao {
-  margin-top: 100px;
-  background-color: #f2f2f2; 
-  font-size: 30px;
-  text-align: center;
-  color: #444;
-}
-
-.texto {
-  padding: 50px;
-  text-align: center;
-  font-size: 20px;
-  background-color: transparent;
-  color: #444; 
-}
-
-
-.produtos {
-  padding: 30px;
-  margin-top: 150px;
-  font-size: 17px;
+.recepcao{
   display: flex;
-  color: #444; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  color: #333;
 }
 
-.imgprodutos {
-  width: 250px;
-  height: 250px;
+/* Estilo para a imagem dentro do cabeçalho */
+.recepcao img.recomendacoes {
+  width: 500px; /* Largura da imagem */
+  height: 350px; /* Altura automática para manter a proporção */
+  transition: transform 0.3s ease; /* Transição suave */
 }
+
+/* Efeito ao passar o mouse sobre a imagem */
+.recepcao img.recomendacoes:hover {
+  transform: scale(1.1); /* Aumenta a escala da imagem */
+}
+
+/* Estilo para o parágrafo dentro do cabeçalho */
+.recepcao p {
+  font-size: 24px; /* Tamanho da fonte */
+  line-height: 1.5; /* Altura da linha */
+  color: #333; /* Cor do texto */
+  padding: 80px;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.product h2 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.product p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
 
 .feedback {
   margin-top: 150px;
@@ -116,23 +159,9 @@ input {
   color: #444; 
 }
 
-.recomendacoes {
-  width: 600px;
-  height: 500px;
-}
-
-#recomendacoes {
-  background-color: #f2f2f2; 
-  margin-top: 150px;
-  text-align: center;
-}
-
-.contato {
-  padding: 50px;
-}
-
 header {
-  background-color: #ffffff; 
+
+  background-color:  #f4f4f4;
   color: #444; 
   padding: 20px;
   text-align: center;
